@@ -1,4 +1,4 @@
-# Unity WebGL CI/CD with GitHub Actions
+# Unreal Engine
 
 WebGL published here (Zyvor-Chenoo!) https://github.com/Zyvor-Chenoo/UnityBoilerplate
 
@@ -9,14 +9,35 @@ WebGL published here (Zyvor-Chenoo!) https://github.com/Zyvor-Chenoo/UnityBoiler
 - [ ] I have edited the README.md file to include my own information on the url for the web build;
 - [ ] I have followed the instructions to activate my personal licence here: https://game.ci/docs/github/activation/ ;
     - [ ] If I choose to make the repository private, I will follow this guide to add the instructor as a collaborator. https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-github-user-account/managing-access-to-your-personal-repositories/inviting-collaborators-to-a-personal-repository and set up the keys here https://game.ci/docs/github/builder/#private-github-repositories
-- [ ] I have visited the `Settings` > `Secrets and Variables` > `Actions`;
-- [ ] I have added the `UNITY_SERIAL` secret to my repository with the Unity license key;
-- [ ] I have added the `UNITY_EMAIL` secret to my repository with the Unity username;
-- [ ] I have added the `UNITY_PASSWORD` secret to my repository with the Unity password;
 - [ ] I changed the `Settings` > `Actions` > `General` > `Workflow Permissions` to `Read and write permissions for actions`;
 - [ ] I cloned the repository to my local machine and opened the project in Unity and made changes to the project;
 - [ ] I have committed and pushed the changes to the `main` or `master` branch of the repository;
 - [ ] I understand that every time I push to the `main` or `master` branch, the project will be built and deployed to the `gh-pages` branch;
+## Install Unreal Engine 4.23:
+- [ ] Download and install the Epic Games Launcher.
+- [ ]  Through the launcher, install Unreal Engine version 4.23.
+- [ ] During installation, ensure the "HTML5" target platform is selected under "Installation Options." Deselecting other platforms can reduce installation size.
+- [ ] Create or Open Your Project:
+- [ ] Launch Unreal Engine 4.23.
+- [ ] Create a new project or open an existing one that you wish to deploy to the web.
+- [ ] Consider using a template like the Twin Stick Shooter for a quick test.
+## Prepare for Packaging:
+- [ ] Project Settings: Navigate to Edit > Project Settings.
+- [ ] Packaging Settings: In the "Packaging" section, ensure "Full Rebuild" is selected and "For Distribution" is checked if you intend to deploy it publicly.
+- [ ] HTML5 Platform Settings: Adjust any necessary settings specific to HTML5 if required for your project.
+## Package the Project:
+- [ ] Go to File > Package Project > HTML5.
+- [ ] Choose a location on your computer to save the packaged build.
+- [ ] Unreal Engine will then compile and package your project for HTML5. This process can take a significant amount of time depending on your project's complexity and your system specifications.
+## Test Locally (Optional):
+- [ ] After packaging, navigate to the build folder you specified.
+- [ ] Locate the HTML5LaunchHelper.exe file within the build directory.
+- [ ] Run this helper, and it will typically open a local web server.
+- [ ] Open your web browser and navigate to http://localhost:8000 (or the address provided by the helper) to test your game in the browser.
+## Deploy to a Web Server:
+- [ ] The packaged build folder contains all the necessary files to host your game on a web server.
+- [ ] Upload the contents of this folder to your chosen web hosting service.
+- [ ] Ensure your web server is configured to serve the .html and associated files correctly.
 - [ ] I saw the GitHub Actions build the project;
 - [ ] I changed the `Settings` > `Pages` > `Source` to `gh-pages` branch;
 - [ ] I saw the GitHub Actions deploy the project to the `gh-pages` branch;
